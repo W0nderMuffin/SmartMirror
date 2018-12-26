@@ -1,0 +1,42 @@
+<html>
+<header>
+	<title>Smart Mirror</title>
+	<script src="js/magic_config.js"></script>
+	<script src="js/smart_mirror.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin,Cyrillic">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/smart_mirror.css" rel="stylesheet">
+</header>
+<body class="container_body" onload="initialize()">
+	<div id="dashboard">
+		<div class="container_time" id="container_time" style="width: 500px">
+			<div id="time" class="time">time</div>
+			<div id="date" class="date">date</div>
+		</div>
+		<div class="container_weather" id="container_weather">
+			<table>
+				<tr>
+					<td>
+						<div id="temperature" class="weather">temperature</div>
+					</td>
+					<td>
+						<div id="weather_img" class="weather">weather_img</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div id="city" class="city">city</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div id="country" class="country">country</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="comic" class="comic_bg"></div>
+</body>
+</html>

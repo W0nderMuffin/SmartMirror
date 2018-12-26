@@ -1,13 +1,30 @@
 SmartMirror
 =======================
 
-This Smart Mirror software is completely based on html, 
-javascript and css. Everything you need is a browser.
-This is a very minimalistic dashboard that shows the time, 
-weather, music and switches. 
-Time comes from the system time of the computer. 
-To show weather information i use  http://api.openweathermap.org. 
-Music and switch information comes from my smart home server 
-based on this githup repo: https://github.com/dabastynator/SmartHome
+Based on https://github.com/dabastynator/SmartMirror
 
-<img src="img/demo.png" alt="Drawing" style="width: 500px;"/>
+Adapted to fit on a 5" 800x480 screen.
+
+Make sure to create a 'magic_config.js' in the js folder, where you define the variables 'apiKey', 'city' and 'country'.
+
+```javascript
+var apiKey = "<replace_me>";
+var city = "Stuttgart";
+var country = "DE";
+```
+
+<img src="img/demo.png" alt="Demo"/>
+
+Simple setup example:
+
+* disable screensaver on Raspian
+* use a simple http server (e.g. serve on port 8080) on your Raspberry Pi with Raspian (Stretch)
+* use the browser chromium in kiosk mode
+```
+http-server /path/to/repo -p 8080
+chromium-browser --kiosk --app=localhost:8080 &
+```
+
+* write a script for autostart the browser in fullscreen (e.g.add `. /home/pi/myAutostartScript.sh` to '/etc/profile')
+
+
